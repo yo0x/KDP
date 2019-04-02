@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "Common/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Common.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Common.dll": {}
-        }
-      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -38,14 +29,26 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.ML/0.9.0": {
+      "Microsoft.Data.DataView/0.11.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.ML.CpuMath": "0.9.0",
+          "System.Memory": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.DataView.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.DataView.dll": {}
+        }
+      },
+      "Microsoft.ML/0.11.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.DataView": "0.11.0",
+          "Microsoft.ML.CpuMath": "0.11.0",
           "Newtonsoft.Json": "10.0.3",
           "System.CodeDom": "4.4.0",
           "System.Collections.Immutable": "1.5.0",
-          "System.ComponentModel.Composition": "4.5.0",
           "System.Memory": "4.5.1",
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Threading.Tasks.Dataflow": "4.8.0"
@@ -53,29 +56,19 @@
         "compile": {
           "lib/netstandard2.0/Microsoft.ML.Core.dll": {},
           "lib/netstandard2.0/Microsoft.ML.Data.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Ensemble.dll": {},
           "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {},
           "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Maml.dll": {},
           "lib/netstandard2.0/Microsoft.ML.PCA.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.ResultProcessor.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.SamplesUtils.dll": {},
           "lib/netstandard2.0/Microsoft.ML.StandardLearners.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Sweeper.dll": {},
           "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.ML.Core.dll": {},
           "lib/netstandard2.0/Microsoft.ML.Data.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Ensemble.dll": {},
           "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {},
           "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Maml.dll": {},
           "lib/netstandard2.0/Microsoft.ML.PCA.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.ResultProcessor.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.SamplesUtils.dll": {},
           "lib/netstandard2.0/Microsoft.ML.StandardLearners.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Sweeper.dll": {},
           "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {}
         },
         "build": {
@@ -133,7 +126,7 @@
           }
         }
       },
-      "Microsoft.ML.CpuMath/0.9.0": {
+      "Microsoft.ML.CpuMath/0.11.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.1"
@@ -389,201 +382,6 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
-      "PLplot/5.13.7": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/PLplotNet.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/PLplotNet.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libplplot.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/win-x64/native/cairo-gobject.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/cairo.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/csirocsa.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/expat.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/fontconfig.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/freetype.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/gio-2.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/glib-2.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/gmodule-2.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/gobject-2.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/gthread-2.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/harfbuzz.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/libbz2.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/libcharset.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/libffi.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/libiconv.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/libintl.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/libpng16.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pango-1.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pangocairo-1.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pangoft2-1.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pangowin32-1.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pcre.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pcre16.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pcre32.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pcrecpp.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pcreposix.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/pixman-1.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap0_alternate.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap0_black_on_white.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap0_default.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap0_white_bg.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap1_blue_red.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap1_blue_yellow.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap1_default.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap1_gray.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap1_highfreq.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap1_lowfreq.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/cmap1_radar.pal": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/plstnd5.fnt": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplot/plxtnd5.fnt": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/plplotcxx.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/qsastime.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/zlib1.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          }
-        }
-      },
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
@@ -658,18 +456,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.ComponentModel.dll": {}
-        }
-      },
-      "System.ComponentModel.Composition/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Permissions": "4.5.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/System.ComponentModel.Composition.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/System.ComponentModel.Composition.dll": {}
         }
       },
       "System.ComponentModel.Primitives/4.3.0": {
@@ -1075,59 +861,6 @@
           "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
-      "System.Security.AccessControl/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0",
-          "System.Security.Principal.Windows": "4.5.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Security.Permissions/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.5.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Permissions.dll": {}
-        }
-      },
-      "System.Security.Principal.Windows/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1260,18 +993,6 @@
     }
   },
   "libraries": {
-    "Common/1.0.0": {
-      "sha512": "4XlXgnQD9XoNdJ1uwHTcRBShUHBNV+abu5LIAIneaFe+VFQEpWIUDwjaTt8a8ElotAEyQlXDv9Hqr8Qw/mevTw==",
-      "type": "package",
-      "path": "common/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "common.1.0.0.nupkg.sha512",
-        "common.nuspec",
-        "lib/net40/Common.dll"
-      ]
-    },
     "Microsoft.CSharp/4.3.0": {
       "sha512": "FEHXDPeXoGD3PGQTHWmcsQlpYLCMLA+QtETEB989d62HJmo/qCVqGT5bCbaYRYVNbCPMeUyR2TjA745XNun/xw==",
       "type": "package",
@@ -1331,10 +1052,25 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.ML/0.9.0": {
-      "sha512": "GBoNeRGDJTPUYIb07COPchWo5kpSIBEdteNfr4w7TXoljvlOD0ow1HR7of6NDVd0n/bYPG6JegZ/XADot8VuWA==",
+    "Microsoft.Data.DataView/0.11.0": {
+      "sha512": "eVSwMDptCn3dGGCdeOvsrLgynZBy3CRJDRiOWROQyom4rNPw4QXhXWZxAlaAGn+Avh5ALqiINCJSZxLy+G/eyQ==",
       "type": "package",
-      "path": "microsoft.ml/0.9.0",
+      "path": "microsoft.data.dataview/0.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.Data.DataView.dll",
+        "lib/netstandard2.0/Microsoft.Data.DataView.xml",
+        "microsoft.data.dataview.0.11.0.nupkg.sha512",
+        "microsoft.data.dataview.nuspec"
+      ]
+    },
+    "Microsoft.ML/0.11.0": {
+      "sha512": "5ZKgNOt62rYecXoRqnL1sk6Cwim7Ea7BR4IQ9Dyrc07HkbLCwIrD69Wub4CVYcEzqsDfefjM+sf9jQuuJ8fZWg==",
+      "type": "package",
+      "path": "microsoft.ml/0.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1347,27 +1083,17 @@
         "lib/netstandard2.0/Microsoft.ML.Core.xml",
         "lib/netstandard2.0/Microsoft.ML.Data.dll",
         "lib/netstandard2.0/Microsoft.ML.Data.xml",
-        "lib/netstandard2.0/Microsoft.ML.Ensemble.dll",
-        "lib/netstandard2.0/Microsoft.ML.Ensemble.xml",
         "lib/netstandard2.0/Microsoft.ML.FastTree.dll",
         "lib/netstandard2.0/Microsoft.ML.FastTree.xml",
         "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll",
         "lib/netstandard2.0/Microsoft.ML.KMeansClustering.xml",
-        "lib/netstandard2.0/Microsoft.ML.Maml.dll",
-        "lib/netstandard2.0/Microsoft.ML.Maml.xml",
         "lib/netstandard2.0/Microsoft.ML.PCA.dll",
         "lib/netstandard2.0/Microsoft.ML.PCA.xml",
-        "lib/netstandard2.0/Microsoft.ML.ResultProcessor.dll",
-        "lib/netstandard2.0/Microsoft.ML.ResultProcessor.xml",
-        "lib/netstandard2.0/Microsoft.ML.SamplesUtils.dll",
-        "lib/netstandard2.0/Microsoft.ML.SamplesUtils.xml",
         "lib/netstandard2.0/Microsoft.ML.StandardLearners.dll",
         "lib/netstandard2.0/Microsoft.ML.StandardLearners.xml",
-        "lib/netstandard2.0/Microsoft.ML.Sweeper.dll",
-        "lib/netstandard2.0/Microsoft.ML.Sweeper.xml",
         "lib/netstandard2.0/Microsoft.ML.Transforms.dll",
         "lib/netstandard2.0/Microsoft.ML.Transforms.xml",
-        "microsoft.ml.0.9.0.nupkg.sha512",
+        "microsoft.ml.0.11.0.nupkg.sha512",
         "microsoft.ml.nuspec",
         "runtimes/linux-x64/native/libFactorizationMachineNative.so",
         "runtimes/linux-x64/native/libFastTreeNative.so",
@@ -1383,10 +1109,10 @@
         "runtimes/win-x86/native/LdaNative.dll"
       ]
     },
-    "Microsoft.ML.CpuMath/0.9.0": {
-      "sha512": "DfjQEvlMLr7IKhktdNgndJ67zQ59exV/m15tuntFAsK2GO4dma1HquBRJF0UCNeLkk6wQfKYOyTolDVeUoQheg==",
+    "Microsoft.ML.CpuMath/0.11.0": {
+      "sha512": "15AWPD9bkz10GmC8dI6kj15rw3lWv1aAhTvYfUpZY5onxMauw5IVylkf+vQaW5i2TWr1UvssTN5GtEceD9zOiw==",
       "type": "package",
-      "path": "microsoft.ml.cpumath/0.9.0",
+      "path": "microsoft.ml.cpumath/0.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1395,7 +1121,7 @@
         "build/netstandard2.0/Microsoft.ML.CpuMath.props",
         "lib/netstandard2.0/Microsoft.ML.CpuMath.dll",
         "lib/netstandard2.0/Microsoft.ML.CpuMath.xml",
-        "microsoft.ml.cpumath.0.9.0.nupkg.sha512",
+        "microsoft.ml.cpumath.0.11.0.nupkg.sha512",
         "microsoft.ml.cpumath.nuspec",
         "runtimes/linux-x64/native/libCpuMathNative.so",
         "runtimes/osx-x64/native/libCpuMathNative.dylib",
@@ -1903,65 +1629,6 @@
         "tools/install.ps1"
       ]
     },
-    "PLplot/5.13.7": {
-      "sha512": "GlKBR8dbzgzAVchV+N95HsSQ8EE3eTw2WXOzDRRlsKy9ZK7n2i2bmZe64+mF/0JmubZvCbptQGVISwFobyuykg==",
-      "type": "package",
-      "path": "plplot/5.13.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/PLplotNet.dll",
-        "lib/netstandard2.0/PLplotNet.xml",
-        "plplot.5.13.7.nupkg.sha512",
-        "plplot.nuspec",
-        "runtimes/linux-x64/native/libplplot.so",
-        "runtimes/win-x64/native/cairo-gobject.dll",
-        "runtimes/win-x64/native/cairo.dll",
-        "runtimes/win-x64/native/csirocsa.dll",
-        "runtimes/win-x64/native/expat.dll",
-        "runtimes/win-x64/native/fontconfig.dll",
-        "runtimes/win-x64/native/freetype.dll",
-        "runtimes/win-x64/native/gio-2.dll",
-        "runtimes/win-x64/native/glib-2.dll",
-        "runtimes/win-x64/native/gmodule-2.dll",
-        "runtimes/win-x64/native/gobject-2.dll",
-        "runtimes/win-x64/native/gthread-2.dll",
-        "runtimes/win-x64/native/harfbuzz.dll",
-        "runtimes/win-x64/native/libbz2.dll",
-        "runtimes/win-x64/native/libcharset.dll",
-        "runtimes/win-x64/native/libffi.dll",
-        "runtimes/win-x64/native/libiconv.dll",
-        "runtimes/win-x64/native/libintl.dll",
-        "runtimes/win-x64/native/libpng16.dll",
-        "runtimes/win-x64/native/pango-1.dll",
-        "runtimes/win-x64/native/pangocairo-1.dll",
-        "runtimes/win-x64/native/pangoft2-1.dll",
-        "runtimes/win-x64/native/pangowin32-1.dll",
-        "runtimes/win-x64/native/pcre.dll",
-        "runtimes/win-x64/native/pcre16.dll",
-        "runtimes/win-x64/native/pcre32.dll",
-        "runtimes/win-x64/native/pcrecpp.dll",
-        "runtimes/win-x64/native/pcreposix.dll",
-        "runtimes/win-x64/native/pixman-1.dll",
-        "runtimes/win-x64/native/plplot.dll",
-        "runtimes/win-x64/native/plplot/cmap0_alternate.pal",
-        "runtimes/win-x64/native/plplot/cmap0_black_on_white.pal",
-        "runtimes/win-x64/native/plplot/cmap0_default.pal",
-        "runtimes/win-x64/native/plplot/cmap0_white_bg.pal",
-        "runtimes/win-x64/native/plplot/cmap1_blue_red.pal",
-        "runtimes/win-x64/native/plplot/cmap1_blue_yellow.pal",
-        "runtimes/win-x64/native/plplot/cmap1_default.pal",
-        "runtimes/win-x64/native/plplot/cmap1_gray.pal",
-        "runtimes/win-x64/native/plplot/cmap1_highfreq.pal",
-        "runtimes/win-x64/native/plplot/cmap1_lowfreq.pal",
-        "runtimes/win-x64/native/plplot/cmap1_radar.pal",
-        "runtimes/win-x64/native/plplot/plstnd5.fnt",
-        "runtimes/win-x64/native/plplot/plxtnd5.fnt",
-        "runtimes/win-x64/native/plplotcxx.dll",
-        "runtimes/win-x64/native/qsastime.dll",
-        "runtimes/win-x64/native/zlib1.dll"
-      ]
-    },
     "System.CodeDom/4.4.0": {
       "sha512": "E/lvSfMFPtNflAgdM6AuPU8JbZdqdSoGpU66G7SrduCqdrFyPflaqqV4gN2d0hrCBpu92HaoqpUP5d+g9Itcxw==",
       "type": "package",
@@ -2209,40 +1876,6 @@
         "ref/xamarinwatchos10/_._",
         "system.componentmodel.4.3.0.nupkg.sha512",
         "system.componentmodel.nuspec"
-      ]
-    },
-    "System.ComponentModel.Composition/4.5.0": {
-      "sha512": "pOLRbg5l0P53ZWs8fAqiLPHb1fJum2H1XoWeO5XV6b/oCzRSSzz5LPtzDUZay2KCNWCn7w38zx1+swei210iJg==",
-      "type": "package",
-      "path": "system.componentmodel.composition/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
-        "lib/netstandard2.0/System.ComponentModel.Composition.dll",
-        "lib/uap10.0.16299/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netstandard2.0/System.ComponentModel.Composition.dll",
-        "ref/uap10.0.16299/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.composition.4.5.0.nupkg.sha512",
-        "system.componentmodel.composition.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
@@ -3832,112 +3465,6 @@
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
-    "System.Security.AccessControl/4.5.0": {
-      "sha512": "6RQtcT+TyDgLUFsAnmmdfRRGdLYKxSZGkSPOd052tvYFxOTMaQb6ANlwhGqZtNO52PosaCoXu7uatFneujAxmA==",
-      "type": "package",
-      "path": "system.security.accesscontrol/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.AccessControl.dll",
-        "lib/net461/System.Security.AccessControl.dll",
-        "lib/netstandard1.3/System.Security.AccessControl.dll",
-        "lib/netstandard2.0/System.Security.AccessControl.dll",
-        "lib/uap10.0.16299/_._",
-        "ref/net46/System.Security.AccessControl.dll",
-        "ref/net461/System.Security.AccessControl.dll",
-        "ref/net461/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/System.Security.AccessControl.dll",
-        "ref/netstandard1.3/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
-        "ref/netstandard2.0/System.Security.AccessControl.dll",
-        "ref/netstandard2.0/System.Security.AccessControl.xml",
-        "ref/uap10.0.16299/_._",
-        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
-        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
-        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
-        "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.accesscontrol.4.5.0.nupkg.sha512",
-        "system.security.accesscontrol.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Security.Permissions/4.5.0": {
-      "sha512": "O+e9qamSTJ4YOJCpnLgsf9FTGfsxJv2On1OdYkhmd/XA5AYRvUatkz7Rp3dS9XR7rhVuklnjST1dRoMK7N4cGw==",
-      "type": "package",
-      "path": "system.security.permissions/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Security.Permissions.dll",
-        "lib/netstandard2.0/System.Security.Permissions.dll",
-        "ref/net461/System.Security.Permissions.dll",
-        "ref/net461/System.Security.Permissions.xml",
-        "ref/netstandard2.0/System.Security.Permissions.dll",
-        "ref/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.4.5.0.nupkg.sha512",
-        "system.security.permissions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Security.Principal.Windows/4.5.0": {
-      "sha512": "aEFuhlWINOa6KnKeFqQNzmtOeyCCyIJY4CS5DI9keDNXgVzqVsK46axp8Rpkx46S+QlNTqGgdx/O/mzrC1GA5A==",
-      "type": "package",
-      "path": "system.security.principal.windows/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.Principal.Windows.dll",
-        "lib/net461/System.Security.Principal.Windows.dll",
-        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
-        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
-        "lib/uap10.0.16299/_._",
-        "ref/net46/System.Security.Principal.Windows.dll",
-        "ref/net461/System.Security.Principal.Windows.dll",
-        "ref/net461/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
-        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
-        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
-        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
-        "ref/uap10.0.16299/_._",
-        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.principal.windows.4.5.0.nupkg.sha512",
-        "system.security.principal.windows.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "U564F0gK8wI5A+SXUg99g/sxG9Fgynj90qgtUzMcK8wDF6iAktFXpZfY9cETcz3NKvKR/rQpyhstguPcAA2lUA==",
       "type": "package",
@@ -4453,10 +3980,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Common >= 1.0.0",
-      "Microsoft.ML >= 0.9.0",
-      "Microsoft.NETCore.App >= 2.2.0",
-      "PLplot >= 5.13.7"
+      "Microsoft.ML >= 0.11.0",
+      "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
   "packageFolders": {
@@ -4465,11 +3990,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/y7x/Documents/Orzak_dynamics/KinneretDynamics/kinneretModel/kinneretModel.csproj",
-      "projectName": "kinneretModel",
-      "projectPath": "/home/y7x/Documents/Orzak_dynamics/KinneretDynamics/kinneretModel/kinneretModel.csproj",
+      "projectUniqueName": "/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/KDP.csproj",
+      "projectName": "KDP",
+      "projectPath": "/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/KDP.csproj",
       "packagesPath": "/home/y7x/.nuget/packages/",
-      "outputPath": "/home/y7x/Documents/Orzak_dynamics/KinneretDynamics/kinneretModel/obj/",
+      "outputPath": "/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/y7x/.nuget/NuGet/NuGet.Config"
@@ -4494,23 +4019,15 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "Common": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
           "Microsoft.ML": {
             "target": "Package",
-            "version": "[0.9.0, )"
+            "version": "[0.11.0, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
-          },
-          "PLplot": {
-            "target": "Package",
-            "version": "[5.13.7, )"
           }
         },
         "imports": [
@@ -4520,17 +4037,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Common 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
-      "libraryId": "Common",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }

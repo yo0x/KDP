@@ -1,2 +1,0 @@
-# KDP
-KDP ongoing project

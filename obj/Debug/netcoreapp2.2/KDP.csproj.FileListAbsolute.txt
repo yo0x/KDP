@@ -1,0 +1,11 @@
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/obj/Debug/netcoreapp2.2/KDP.csprojAssemblyReference.cache
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/obj/Debug/netcoreapp2.2/KDP.csproj.CoreCompileInputs.cache
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/obj/Debug/netcoreapp2.2/KDP.AssemblyInfoInputs.cache
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/obj/Debug/netcoreapp2.2/KDP.AssemblyInfo.cs
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/bin/Debug/netcoreapp2.2/KDP.deps.json
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/bin/Debug/netcoreapp2.2/KDP.runtimeconfig.json
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/bin/Debug/netcoreapp2.2/KDP.runtimeconfig.dev.json
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/bin/Debug/netcoreapp2.2/KDP.dll
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/bin/Debug/netcoreapp2.2/KDP.pdb
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/obj/Debug/netcoreapp2.2/KDP.dll
+/home/y7x/Documents/DEV_APPS_ONGOING/Orzak_dynamics/KDP/obj/Debug/netcoreapp2.2/KDP.pdb
